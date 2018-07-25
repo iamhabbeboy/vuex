@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # vuextutorial
 
 > A Vue.js project
