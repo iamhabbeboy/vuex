@@ -7,13 +7,12 @@ import axios from 'axios';
 
 export default new Vuex.Store({
     state: {
-        students: []
+        data: []
     },
     getters: {},
     actions: {
         getStudents({ commit }) {
             axios.get(`https://jsonplaceholder.typicode.com/posts/1`)
-            .then(r => r.data)
             .then(res => {
                 commit('setStudents', res)
             })
@@ -21,7 +20,7 @@ export default new Vuex.Store({
     },
     mutations: {
         setStudents(state, res) {
-            state.res = res
+            state.data = res
         }
     }
 })
